@@ -1,0 +1,31 @@
+{
+  "name": "ether-contract-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf ./build/",
+    "precompile": "yarn clean",
+    "compile": "waffle",
+    "flatten": "waffle flatten",
+    "pretest": "yarn compile",
+    "test": "mocha --timeout 600000",
+    "testFile": "mocha --timeout 120000 --no-config --require ts-node/register"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.18",
+    "@types/mocha": "^8.2.2",
+    "bignumber.js": "^9.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.3.0",
+    "ethereumjs-util": "^7.0.10",
+    "mocha": "^8.4.0",
+    "rimraf": "^3.0.2",
+    "solc": "0.6.8",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.4.0"
+  }
+}
